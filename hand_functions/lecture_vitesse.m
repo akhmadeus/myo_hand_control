@@ -1,4 +1,3 @@
-%lecture vitesse
 function vitesse=lecture_vitesse(doigt,s)
 
 %------------------------choix du doigt----------------------------------------
@@ -48,7 +47,7 @@ flushinput(s);
 fwrite(s,[buf,crc16lo,crc16hi]);
 response = fread(s,12);
 
-%% My version, should be faster:
+%% My version, should be faster, Konstantin:
 fs = repmat('%02X', 1, 4);
 vitesse_hex = sprintf(fs,response(10:-1:7));
 vitesse=hex2dec(vitesse_hex);

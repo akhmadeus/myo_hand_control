@@ -1,4 +1,4 @@
-function ecriture_courant_all_fingers(val,s)
+function ecriture_limite_courant_tous_doigts(val,s)
     for i=0:5
         ecriture_limite_courant(i,val,s);
     end

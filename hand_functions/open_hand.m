@@ -1,4 +1,4 @@
-function Open(s)
+function open_hand(s)
 
 %
 %But: ouvrir complétement la main

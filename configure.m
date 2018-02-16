@@ -1,5 +1,6 @@
 
 dependencies_path = ['..' filesep 'dependancies']; %Relative or absolute
+addpath('decision_functions');
 addpath('hand_functions');
 addpath('func');
 
@@ -8,7 +9,7 @@ com_port_name = 'COM6';  %Win: Go to Control Panel -> Devices -> Check the port 
                          %OSX:, open terminal, go to /dev and find the
                          %file named usb-modemXXXX, copy it's name here
 s = configure_hand(dependencies_path, com_port_name, 0); %Last parameter - whether to force the initialization or not (Boolean)
-ecriture_courant_all_fingers(700,s);
+ecriture_limite_courant_tous_doigts(700,s);
 %% Myo Mex configuration
 [mm,m1] = configure_myo(dependencies_path);
 onCleanup1 = onCleanup(@()mm.delete);
